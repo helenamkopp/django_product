@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Form de Produtos</title>
+</head>
+<body>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Formulario de Produtos</h1>
+    </div>
+
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/listProducts" class="btn btn-info">Voltar para a listagem</a>
+    </div>
+
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <div id="result"></div>
+
+        <form name="form" id="form" action="{% if db %}/updateProduct/{{db.id}}/{%else%}/createProducts/{% endif %}" method="post">
+            {% csrf_token %}
+            <div class="form-group mt-4">Nome: Produto 1</div>
+            <div class="form-group mt-4">Descrição: Descriçao do Produto 1</div>
+            <div class="form-group mt-4">Valor: R$ 150,00</div>
+            <div class="form-group mt-4">Categorias: Categoria A</div>
+            <input type="submit" class="btn btn-success mt-4" value="Salvar">
+        </form>
+    </div>
+</body>
+</html>

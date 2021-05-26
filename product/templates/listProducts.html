@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Listar Produtos</title>
+</head>
+<body>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Listagem de Produtos Disponíveis</h1>
+    </div>
+
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/" class="btn btn-success">Voltar para home</a>
+        <a href="/formProducts" class="btn btn-success">Formulário de Produtos</a>
+    </div>
+
+     <div class="col-8 m-auto pt-3 pb-2 text-center">
+       <form method="get">
+           <input type="text" id="search" name="search" class="form-control" placeholder="Procurar um produto">
+       </form>
+    </div>
+
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Descrição</th>
+                <th scope="col">Valor</th>
+              <th scope="col">Categorias</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>Produto 1</td>
+              <td>Descrição do Produto 1</td>
+              <td>R$ 150,00</td>
+                <td>Categoria A</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</body>
+</html>
